@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to the CSS Theory Tutorial</title>
+    <link rel="shortcut icon" href="../images/logo.jpg" type="image/x-icon">
+
+    <style>
+        /* CSS styles for the blog content */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 30px;
+        }
+
+        article {
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        article p {
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #999;
+        }
+
+        /* Code snippet styles */
+        pre {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+            font-size: 14px;
+            color: #007bff;
+        }
+        video {
+            width: 500px;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS Theory Tutorial: Styling like a pro</h1>
+    </header>
+    <article>
+        <video src="../../Youtube/csstheory.mp4" controls></video>
+        <p>In this tutorial, we'll cover the essential concepts of Cascading Style Sheets (CSS) to help you style your webpages beautifully.</p>
+
+        <p><strong>What is CSS?</strong></p>
+
+        <p>CSS stands for Cascading Style Sheets. It's a language that controls how your HTML elements look and are presented on a webpage. CSS works by selecting HTML elements and applying styles to them.</p>
+
+        <p><strong>How CSS Works</strong></p>
+
+        <p>You use "selectors" to target the elements you want to style and then define "properties" and "values" to make them look just the way you want them. A CSS rule consists of a selector, followed by a set of curly braces. Inside the braces, you add the properties and values to style the selected elements.</p>
+
+        <pre><code>&lt;style&gt;
+    h1 {
+        color: #007bff;
+        font-size: 36px;
+        text-align: center;
+    }
+&lt;/style&gt;</code></pre>
+
+        <p><strong>Applying CSS Styles</strong></p>
+
+        <p>CSS styles can be applied in three ways: inline, internal, and external. Inline styles are written directly in the HTML tags, internal styles are placed within the &lt;style&gt; tag in the HTML file, and external styles are saved in separate CSS files.</p>
+
+        <pre><code>&lt;head&gt;
+    &lt;style&gt;
+        /* Internal CSS */
+        h2 {
+            color: #ff4500;
+            font-size: 24px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+
+        <p><strong>CSS Selectors</strong></p>
+
+        <p>CSS offers various types of selectors: element selectors, class selectors, ID selectors, and more. Each selector targets specific elements, making it easier to style individual or multiple elements at once.</p>
+
+        <pre><code>&lt;style&gt;
+    /* Element Selector */
+    p {
+        font-size: 16px;
+    }
+
+    /* Class Selector */
+    .my-class {
+        color: #008000;
+    }
+
+    /* ID Selector */
+    #my-id {
+        background-color: #f0f0f0;
+    }
+&lt;/style&gt;</code></pre>
+
+        <p><strong>Understanding the Box Model</strong></p>
+
+        <p>Understanding the box model is crucial in CSS. It comprises the content area, padding, border, and margin. By manipulating these components, you can control an element's size and spacing.</p>
+
+        <pre><code>&lt;style&gt;
+    .box {
+        width: 200px;
+        height: 100px;
+        padding: 10px;
+        border: 2px solid #ccc;
+        margin: 20px;
+    }
+&lt;/style&gt;</code></pre>
+
+        <p><strong>Cascading Styles</strong></p>
+
+        <p>"Cascading" means that CSS styles can build upon each other, with more specific styles taking precedence. Learn about specificity, which determines which style is applied when there's a conflict.</p>
+
+        <pre><code>&lt;style&gt;
+    /* Specificity Example */
+    p {
+        color: #007bff; /* Blue */
+    }
+
+    .special {
+        color: #ff4500; /* Orange */
+    }
+
+    /* The "special" class will take precedence over the "p" selector */
+&lt;/style&gt;
+
+&lt;p class="special"&gt;This text will be orange.&lt;/p&gt;</code></pre>
+
+        <p><strong>Units of Measurement</strong></p>
+
+        <p>CSS uses various units for measurements, like pixels, percentages, EMS, and REMs. Understanding the differences and when to use them will help you create responsive designs.</p>
+
+        <pre><code>&lt;style&gt;
+    /* Pixels */
+    h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    /* Percentages */
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* EMs */
+    p {
+        font-size: 1.2em;
+        line-height: 1.5em;
+    }
+
+    /* REMs */
+    body {
+        font-size: 16px;
+    }
+&lt;/style&gt;</code></pre>
+
+        <p><strong>Layout Systems in CSS</strong></p>
+
+        <p>An amazing layout system in CSS is Flexbox. It allows you to create flexible and responsive layouts by controlling the alignment and distribution of elements within a container.</p>
+
+        <pre><code>&lt;style&gt;
+    .flex-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+    }
+
+    .flex-item {
+        margin: 10px;
+    }
+&lt;/style&gt;
+
+&lt;div class="flex-container"&gt;
+    &lt;div class="flex-item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="flex-item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="flex-item"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <p>Another powerful layout system in CSS is Grid. It lets you create complex, two-dimensional layouts with rows and columns, making it perfect for designing modern and responsive web pages.</p>
+
+        <p><strong>Conclusion</strong></p>
+
+        <p>With this tutorial, you will have a solid foundation of CSS for your development journey. As you continue your CSS exploration, remember the concept of specificity when applying styles to your elements. Specificity determines which
+
+ style takes precedence when there's a conflict, and it's essential to understand how it works.</p>
+
+        <p>Experiment with different CSS properties and values to see how they impact the appearance of your web pages. As you practice and gain experience, you'll become more confident in crafting beautiful and responsive designs with CSS. Happy coding and don't forget to subscribe for more!</p>
+    </article>
+
+    <footer>
+        <p>© 2023 Web Development Explorers. All rights reserved.</p>
+    </footer>
+</body>
+</html>
